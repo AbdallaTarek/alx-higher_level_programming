@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-# 6-from_json_string.py
-"""Defines a function converting JSON to string."""
-import json
+"""4-inherits_from.py
+"""
 
 
-def from_json_string(my_str):
-    """Return the JSON string object representation."""
-    return json.loads(my_str)
+def inherits_from(obj, a_class):
+    """ Check for direct or indirect inheritance """
+    if (type(obj) != a_class):
+        return isinstance(obj, a_class)
+    return False
