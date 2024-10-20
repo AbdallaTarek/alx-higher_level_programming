@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-# 6-from_json_string.py
-"""Defines a function converting JSON to string."""
-import json
+"""defines function to see if object is an instance of a class
+that is a subclass of the specified class"""
 
 
-def from_json_string(my_str):
-    """Return the JSON string object representation."""
-    return json.loads(my_str)
+def inherits_from(obj, a_class):
+    """returns True if object is an instance of a subclass
+    of the given class"""
+    if isinstance(obj, a_class) and type(obj) is not a_class:
+        return True
+    else:
+        return False
